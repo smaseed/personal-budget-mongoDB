@@ -4,22 +4,13 @@ const port = 3000;
 
 app.use('/', express.static('public'));
 
-const budget = {
-    myBudget: [
-        {
-            title: 'Eat out',
-            budget: 25
-        },
-        {
-            title: 'Rent',
-            budget: 275
-        },
-        {
-            title: 'Grocery',
-            budget: 110
-        },
-    ]
-};
+const budget = require('./budget.json');
+// fetch("budget.json")
+//     .then(res => res.json())
+//     .then(data => {
+//         budget = data;
+//     })
+//     .catch(error => console.error("Error Loading JSON File:", error));
 
 app.get('/budget', (req, res) => {
     res.json(budget)
