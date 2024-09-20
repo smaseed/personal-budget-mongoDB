@@ -157,7 +157,7 @@
         }
 
         function getBudget() {
-            axios.get('/budget')
+            axios.get('http://127.0.0.1:3000/budget')
             .then(function (res){
                 console.log(res);
                 for (var i=0; i < res.data.myBudget.length; i++){

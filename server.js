@@ -1,8 +1,11 @@
+// budget API
+
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const port = 3000;
 
-app.use('/', express.static('public'));
+app.use(cors());
 
 const budget = require('./budget.json');
 
